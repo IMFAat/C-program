@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+    <object id="MainScreen" class="GtkBox">
+        <child>
+            <object class="GtkLabel" id="lab">
+                <property name="label">Hello World</property>
+            </object>
+        </child>
+    </object>
+</interface>
