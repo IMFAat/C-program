@@ -1,0 +1,41 @@
+:root {
+    --text-color: #0d1618;
+    --background-color: #fcf6f4;
+    --primary-color: #c97046;
+    --secondary-color: #dfcd93;
+    --accent-color: #d4c36c;
+}
+
+#MainBox {
+    background-color: var(--background-color);
+}
+
+#DrawerBox {
+    background-color: var(--secondary-color);
+    margin: 5px;
+    border-radius: 10px;
+}
+
+#DrawerIconBox {
+    filter: drop-shadow(0px 100px 0 var(--text-color));
+    transform: translateY(-100px);
+}
+
+#DrawerButton{
+    margin: 10px;
+    /*background-color: #d4c36c;*/
+    background-image: none;
+    border: transparent;
+    box-shadow: 0 0 transparent;
+    border-radius: 30px;
+}
+
+/*button:active {*/
+/*    background-color: gray;*/
+/*}*/
+button:hover {
+    background-color: rgba(128, 128, 128, 0.2);
+}
+
+
+
