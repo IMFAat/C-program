@@ -11,23 +11,35 @@
                 <property name="vexpand">TRUE</property>
 
                 <child>
-                    <object class="GtkBox" id="DrawerBox">
-                        <property name="name">DrawerBox</property>
-                        <property name="vexpand">TRUE</property>
-                        <property name="orientation">GTK_ORIENTATION_VERTICAL</property>
+                    <object class="GtkBox">
+                        <property name="name">DrawerContainer</property>
                         <child>
-                            <object class="GtkButton" id="DrawerButton">
-                                <property name="name">DrawerButton</property>
-                                <property name="width-request">65</property>
-                                <property name="height-request">65</property>
+                            <object class="GtkBox" id="DrawerBox">
+                                <property name="name">DrawerBox</property>
+                                <property name="vexpand">FALSE</property>
+                                <property name="orientation">GTK_ORIENTATION_VERTICAL</property>
                                 <child>
-                                    <object class="GtkBox" id="DrawerIconBox">
-                                        <property name="name">DrawerIconBox</property>
-                                        <property name="halign">GTK_ALIGN_CENTER</property>
+                                    <object class="GtkBox">
+                                        <property name="orientation">GTK_ORIENTATION_HORIZONTAL</property>
+                                        <child>
+                                            <object class="GtkButton" id="DrawerButton">
+                                                <property name="name">DrawerButton</property>
+                                                <property name="width-request">65</property>
+                                                <property name="height-request">65</property>
+                                                <property name="hexpand">FALSE</property>
+                                                <child>
+                                                    <object class="GtkBox" id="DrawerIconBox">
+                                                        <property name="name">DrawerIconBox</property>
+                                                        <property name="halign">GTK_ALIGN_CENTER</property>
+                                                    </object>
+                                                </child>
+                                            </object>
+                                        </child>
                                     </object>
                                 </child>
                             </object>
                         </child>
+
                     </object>
                 </child>
             </object>

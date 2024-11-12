@@ -12,8 +12,12 @@
 
 #DrawerBox {
     background-color: var(--secondary-color);
-    margin: 5px;
+    /*margin: 5px;*/
     border-radius: 10px;
+}
+
+#DrawerContainer{
+    padding: 5px;
 }
 
 #DrawerIconBox {
