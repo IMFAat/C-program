@@ -2,17 +2,27 @@
 <interface>
     <object id="MainScreen" class="GtkBox">
         <child>
-            <object class="GtkBox">
-                <property name="name">MainBox</property>
-                <property name="orientation">GTK_ORIENTATION_HORIZONTAL</property>
-                <property name="halign">GTK_ALIGN_FILL</property>
-                <property name="valign">GTK_ALIGN_FILL</property>
+            <object class="GtkOverlay">
                 <property name="hexpand">TRUE</property>
                 <property name="vexpand">TRUE</property>
-
+                <property name="halign">GTK_ALIGN_FILL</property>
+                <property name="valign">GTK_ALIGN_FILL</property>
                 <child>
                     <object class="GtkBox">
+                        <property name="halign">GTK_ALIGN_FILL</property>
+                        <property name="valign">GTK_ALIGN_FILL</property>
+                        <child>
+                            <object class="GtkBox">
+                                <property name="width-request">75</property>
+                            </object>
+                        </child>
+
+                    </object>
+                </child>
+                <child type="overlay">
+                    <object class="GtkBox">
                         <property name="name">DrawerContainer</property>
+                        <property name="halign">GTK_ALIGN_START</property>
                         <child>
                             <object class="GtkBox" id="DrawerBox">
                                 <property name="name">DrawerBox</property>
@@ -39,16 +49,9 @@
                                 </child>
                             </object>
                         </child>
-
                     </object>
                 </child>
 
-                <child>
-                    <object class="GtkBox">
-                        <property name="name">MainContainer</property>
-
-                    </object>
-                </child>
             </object>
         </child>
     </object>

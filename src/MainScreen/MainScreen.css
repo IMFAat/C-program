@@ -41,9 +41,5 @@ button:hover {
     background-color: rgba(128, 128, 128, 0.2);
 }
 
-#MainContainer{
-    background-color: var(--primary-color);
-}
-
 
 
