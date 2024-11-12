@@ -1,6 +1,6 @@
 #include <gtk/gtk.h>
 #include <pthread.h>
-#define ms *1000
+#define ms *1000000
 
 void DrawerButtonOnClick(GtkWidget *button, gpointer data);
 
@@ -30,6 +30,10 @@ void DrawerButtonOnClick(GtkWidget *button, gpointer data) {
 }
 
 void *drawerAnimation(gpointer data) {
+    struct timespec ts;
+    ts.tv_sec = 0;            // 秒
+    ts.tv_nsec = 0.5 ms;     // 納秒 (1毫秒)
+
     isAnimating = true;
     GtkWidget *drawer = (GtkWidget *) data;
     int lWidth = 0; //上次的寬度
@@ -42,7 +46,7 @@ void *drawerAnimation(gpointer data) {
         while (lWidth == width) {
             width = gtk_widget_get_width(drawer);
             width += dWidth;
-            usleep(0.5 ms);
+            nanosleep(&ts, NULL);
         }
         printf("%d\n", width);
         lWidth = width;
