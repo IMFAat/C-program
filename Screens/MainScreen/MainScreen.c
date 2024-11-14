@@ -3,6 +3,7 @@
 #define ms *1000000
 
 void DrawerButtonOnClick(GtkWidget *button, gpointer data);
+void showDrawerContext(gpointer drawer);
 
 //主畫面
 void MainScreen(GtkBuilder *builder) {
@@ -21,6 +22,8 @@ void MainScreen(GtkBuilder *builder) {
 
 bool isDrawerOpen = false;
 bool isAnimating = false;
+bool isDrawerContextShow = false;
+GtkWidget *drawerContext = NULL;
 
 gboolean drawerAnimation(gpointer data);
 
@@ -31,17 +34,27 @@ void DrawerButtonOnClick(GtkWidget *button, gpointer data) {
 }
 
 gboolean drawerAnimation(gpointer data) {
+    //TODO 透明度動畫
     static int step = 0;
     static int dWidth = 10;
     GtkWidget *drawer = (GtkWidget *) data;
 
+    if (!isDrawerContextShow) {
+        drawerContext = (GtkWidget *) gtk_box_new((GtkOrientation) GTK_ORIENTATION_VERTICAL,10);
+        gtk_box_append(data,drawerContext);
+        showDrawerContext(drawerContext);
+        isDrawerContextShow = true;
+    }
+
     if (step == 0) {
         dWidth = 10 * (isDrawerOpen ? -1 : 1);
+
     }
     step++;
 
     int width = gtk_widget_get_width(drawer);
     width += dWidth;
+
     if (width > 300) {
         width = 300;
         step = 0;
@@ -50,12 +63,24 @@ gboolean drawerAnimation(gpointer data) {
         width = 65;
         step = 0;
     }
-    printf("%d\n", width);
     gtk_widget_set_size_request(drawer, width, -1);
     if (step == 0) {
         isDrawerOpen = !isDrawerOpen;
+        if(!isDrawerOpen) {
+            gtk_box_remove(data,drawerContext);
+        }
+        isDrawerContextShow = isDrawerOpen;
         isAnimating = false;
         return G_SOURCE_REMOVE; // 停止動畫
     }
     return G_SOURCE_CONTINUE; // 繼續動畫
+}
+
+
+void showDrawerContext(gpointer drawer) {
+    GtkWidget *button = (GtkWidget *) gtk_button_new();
+    gtk_box_append((GtkBox *)drawer,button);
+    GtkWidget *button2 = (GtkWidget *) gtk_button_new();
+    gtk_box_append((GtkBox *)drawer,button2);
+    gtk_widget_set_opacity(drawer,1);
 }
