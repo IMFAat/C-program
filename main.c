@@ -35,11 +35,10 @@ static void activate(GtkApplication *app, gpointer user_data) {
 
 int main(int argc, char **argv) {
     // GtkApplication *app;
-    int status;
 
     GtkApplication *app = gtk_application_new("org.gtk.example", G_APPLICATION_DEFAULT_FLAGS); //創建app實例
     g_signal_connect(app, "activate", G_CALLBACK(activate), NULL); //連接觸發器
-    status = g_application_run(G_APPLICATION(app), argc, argv); //Run app
+    int status = g_application_run(G_APPLICATION(app), argc, argv); //Run app
     g_object_unref(app); //釋放app
 
     return status;
