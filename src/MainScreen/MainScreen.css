@@ -16,7 +16,7 @@
     border-radius: 10px;
 }
 
-#DrawerContainer{
+#DrawerContainer {
     padding: 5px;
 }
 
@@ -25,7 +25,7 @@
     transform: translateY(-100px);
 }
 
-#DrawerButton{
+#DrawerButton {
     margin: 10px;
     /*background-color: #d4c36c;*/
     background-image: none;
@@ -34,12 +34,21 @@
     border-radius: 30px;
 }
 
-/*button:active {*/
-/*    background-color: gray;*/
-/*}*/
 button:hover {
     background-color: rgba(128, 128, 128, 0.2);
 }
 
+#DrawerContextScrolledWindow{
+    padding: 0 10px;
+}
+
+#DrawerContextScrolledWindow slider,
+#DrawerContextScrolledWindow scrollbar.overlay-indicator.hovering {
+    opacity: 0;
+    background-image: none;
+    background-color: transparent;
+    box-shadow: 0 0 transparent;
+    border: transparent;
+}
 
 

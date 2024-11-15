@@ -1,8 +1,8 @@
 #include <gtk/gtk.h>
-#include <pthread.h>
 #define ms *1000000
 
 void DrawerButtonOnClick(GtkWidget *button, gpointer data);
+
 void showDrawerContext(gpointer drawer);
 
 //主畫面
@@ -23,7 +23,7 @@ void MainScreen(GtkBuilder *builder) {
 bool isDrawerOpen = false;
 bool isAnimating = false;
 bool isDrawerContextShow = false;
-GtkWidget *drawerContext = NULL;
+GtkWidget *drawerContextScrolledWindow = NULL;
 
 gboolean drawerAnimation(gpointer data);
 
@@ -34,22 +34,25 @@ void DrawerButtonOnClick(GtkWidget *button, gpointer data) {
 }
 
 gboolean drawerAnimation(gpointer data) {
-    //TODO 透明度動畫
-    static int step = 0;
-    static int dWidth = 10;
+    int step = 0;
     GtkWidget *drawer = (GtkWidget *) data;
 
     if (!isDrawerContextShow) {
-        drawerContext = (GtkWidget *) gtk_box_new((GtkOrientation) GTK_ORIENTATION_VERTICAL,10);
-        gtk_box_append(data,drawerContext);
+        drawerContextScrolledWindow = (GtkWidget *) gtk_scrolled_window_new();
+        GtkWidget *drawerContext = (GtkWidget *) gtk_box_new((GtkOrientation) GTK_ORIENTATION_VERTICAL, 10);
+        gtk_scrolled_window_set_child((GtkScrolledWindow *) drawerContextScrolledWindow, drawerContext);
+        gtk_scrolled_window_set_policy((GtkScrolledWindow *) drawerContextScrolledWindow, GTK_POLICY_AUTOMATIC,
+                                       GTK_POLICY_NEVER);
+        gtk_scrolled_window_set_has_frame((GtkScrolledWindow *) drawerContextScrolledWindow,false);
+        gtk_widget_set_name((GtkWidget *) drawerContextScrolledWindow, "DrawerContextScrolledWindow");
+        gtk_widget_set_vexpand(drawerContextScrolledWindow,true);
+        gtk_box_append(data, drawerContextScrolledWindow);
         showDrawerContext(drawerContext);
         isDrawerContextShow = true;
     }
 
-    if (step == 0) {
-        dWidth = 10 * (isDrawerOpen ? -1 : 1);
 
-    }
+    int dWidth = 10 * (isDrawerOpen ? -1 : 1);
     step++;
 
     int width = gtk_widget_get_width(drawer);
@@ -63,11 +66,16 @@ gboolean drawerAnimation(gpointer data) {
         width = 65;
         step = 0;
     }
+
+
+    double drawerOpacity = (width - 65) * 1. / (300 - 65);
     gtk_widget_set_size_request(drawer, width, -1);
+    gtk_widget_set_opacity(drawerContextScrolledWindow, drawerOpacity);
+
     if (step == 0) {
         isDrawerOpen = !isDrawerOpen;
-        if(!isDrawerOpen) {
-            gtk_box_remove(data,drawerContext);
+        if (!isDrawerOpen) {
+            gtk_box_remove(data, drawerContextScrolledWindow);
         }
         isDrawerContextShow = isDrawerOpen;
         isAnimating = false;
@@ -79,8 +87,8 @@ gboolean drawerAnimation(gpointer data) {
 
 void showDrawerContext(gpointer drawer) {
     GtkWidget *button = (GtkWidget *) gtk_button_new();
-    gtk_box_append((GtkBox *)drawer,button);
-    GtkWidget *button2 = (GtkWidget *) gtk_button_new();
-    gtk_box_append((GtkBox *)drawer,button2);
-    gtk_widget_set_opacity(drawer,1);
+    gtk_button_set_label((GtkButton *) button,
+                         "adkadkadkadkadkadkadkadkadkadkadkadkadkadkadkadkadkadkadkadkadkadkadkadkadkadkadkadk");
+
+    gtk_box_append((GtkBox *) drawer, button);
 }
