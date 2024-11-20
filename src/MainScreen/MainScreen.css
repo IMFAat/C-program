@@ -95,13 +95,15 @@ button:hover {
 #Add{
     background-image: none;
     background-color: var(--button-color);
-    border-radius: 50px;
     font-size: 20px;
     font-weight: bold;
+    border-radius: 50px;
     border-color: transparent;
 }
 #BottomButtonBox{
-    background-color: var(--schedule-color);
+    background-color: red;
+    border-radius: 50px;
+    /*background-color: var(--schedule-color);*/
 }
 #BottomButtonBoxContainer{
     padding: 5px 20px 5px;

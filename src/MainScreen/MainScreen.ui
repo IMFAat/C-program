@@ -45,8 +45,14 @@
                                                 <child>
                                                     <object id="DailyButtonBox" class="GtkBox">
                                                         <property name="name">BottomButtonBox</property>
+                                                        <property name="orientation">GTK_ORIENTATION_VERTICAL</property>
                                                         <child>
-                                                            <object class="GtkButton" id="AddButton">
+                                                            <object class="GtkBox" id="DailyContentBox">
+                                                                <property name="hexpand">TRUE</property>
+                                                            </object>
+                                                        </child>
+                                                        <child>
+                                                            <object class="GtkButton" id="DailyAddButton">
                                                                 <property name="hexpand">TRUE</property>
                                                                 <property name="halign">GTK_ALIGN_FILL</property>
                                                                 <property name="height-request">50</property>
@@ -79,8 +85,14 @@
                                                 <child>
                                                     <object id="WeeklyButtonBox" class="GtkBox">
                                                         <property name="name">BottomButtonBox</property>
+                                                        <property name="orientation">GTK_ORIENTATION_VERTICAL</property>
                                                         <child>
-                                                            <object class="GtkButton">
+                                                            <object class="GtkBox" id="WeeklyContentBox">
+                                                                <property name="hexpand">TRUE</property>
+                                                            </object>
+                                                        </child>
+                                                        <child>
+                                                            <object class="GtkButton" id="WeeklyAddButton">
                                                                 <property name="hexpand">TRUE</property>
                                                                 <property name="halign">GTK_ALIGN_FILL</property>
                                                                 <property name="height-request">50</property>
