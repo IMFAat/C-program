@@ -4,7 +4,7 @@
 // App觸發器
 static void activate(GtkApplication *app, gpointer user_data) {
     GtkWindow *window = (GtkWindow *) gtk_application_window_new(app);
-    gtk_window_set_title(GTK_WINDOW(window), "Daily Planer");
+    gtk_window_set_title(GTK_WINDOW(window), "Daily Planner");
     gtk_widget_set_size_request(GTK_WIDGET(window),800,500);
     // gtk_window_set_decorated(window,false);
 
@@ -24,7 +24,6 @@ static void activate(GtkApplication *app, gpointer user_data) {
     GtkCssProvider * cssProvider = gtk_css_provider_new();
     gtk_css_provider_load_from_path(cssProvider, cssPath);
     gtk_style_context_add_provider_for_display(gdk_display_get_default(),GTK_STYLE_PROVIDER(cssProvider),GTK_STYLE_PROVIDER_PRIORITY_USER);
-
 
     gtk_window_set_child(GTK_WINDOW(window), GTK_WIDGET(stack));
     gtk_window_set_application(GTK_WINDOW(window), app);

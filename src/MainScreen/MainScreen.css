@@ -4,10 +4,17 @@
     --primary-color: #c97046;
     --secondary-color: #dfcd93;
     --accent-color: #d4c36c;
+    --schedule-color:#9f9f9f;
+    --button-color:#b8b8b8;
 }
 
 #MainBox {
     background-color: var(--background-color);
+}
+
+/*Css Class*/
+.BlurScreen{
+    filter: blur(20px);
 }
 
 #DrawerBox {
@@ -64,6 +71,10 @@ button:hover {
     border: transparent;
 }
 
+#SelectCalendar label:selected{
+    background-color: #c97046;
+}
+
 #SelectCalendar button{
     background-image: none;
     border: transparent;
@@ -71,4 +82,30 @@ button:hover {
     border-radius: 30px;
     margin: 3px;
 }
-
+#Daily{
+    background-color: var(--schedule-color);
+    border-radius: 10px;
+    margin: 5px 10pt 5px 10pt;
+}
+#Weekly{
+    background-color: var(--schedule-color);
+    border-radius: 10px;
+    margin: 5px 10pt 5px 0;
+}
+#Add{
+    background-image: none;
+    background-color: var(--button-color);
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    border-color: transparent;
+}
+#BottomButtonBox{
+    background-color: var(--schedule-color);
+}
+#BottomButtonBoxContainer{
+    padding: 5px 20px 5px;
+}
+#Add:hover{
+    background-color: gray;
+}

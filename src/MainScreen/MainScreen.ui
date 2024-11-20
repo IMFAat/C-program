@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
     <object id="MainScreen" class="GtkBox">
+        <property name="name">MainBox</property>
         <child>
             <object class="GtkOverlay">
                 <property name="hexpand">TRUE</property>
@@ -8,15 +9,93 @@
                 <property name="halign">GTK_ALIGN_FILL</property>
                 <property name="valign">GTK_ALIGN_FILL</property>
                 <child>
-                    <object class="GtkBox">
-                        <property name="halign">GTK_ALIGN_FILL</property>
+                    <object class="GtkBox" id="Schedule">
+                        <property name="hexpand">TRUE</property>
                         <property name="valign">GTK_ALIGN_FILL</property>
+                        <property name="name">Schedule</property>
                         <child>
                             <object class="GtkBox">
+                                <property name="halign">GTK_ALIGN_START</property>
+                                <property name="valign">GTK_ALIGN_FILL</property>
                                 <property name="width-request">75</property>
+                                <property name="name">buffer</property>
                             </object>
                         </child>
+                        <child>
+                            <object class="GtkBox" id="ContextBox">
+                                <property name="hexpand">TRUE</property>
+                                <property name="valign">GTK_ALIGN_FILL</property>
+                                <property name="orientation">GTK_ORIENTATION_HORIZONTAL</property>
+                                <property name="homogeneous">TRUE</property>
+                                <child>
+                                    <object class="GtkBox">
+                                        <property name="hexpand">TRUE</property>
+                                        <property name="valign">GTK_ALIGN_FILL</property>
+                                        <property name="name">Daily</property>
+                                        <property name="orientation">GTK_ORIENTATION_VERTICAL</property>
+                                        <child>
+                                            <object class="GtkBox">
+                                                <property name="halign">GTK_ALIGN_FILL</property>
+                                                <property name="vexpand">TRUE</property>
+                                            </object>
+                                        </child>
+                                        <child>
+                                            <object class="GtkBox">
+                                                <property name="name">BottomButtonBoxContainer</property>
+                                                <child>
+                                                    <object id="DailyButtonBox" class="GtkBox">
+                                                        <property name="name">BottomButtonBox</property>
+                                                        <child>
+                                                            <object class="GtkButton" id="AddButton">
+                                                                <property name="hexpand">TRUE</property>
+                                                                <property name="halign">GTK_ALIGN_FILL</property>
+                                                                <property name="height-request">50</property>
+                                                                <property name="label">+</property>
+                                                                <property name="name">Add</property>
+                                                            </object>
+                                                        </child>
+                                                    </object>
+                                                </child>
+                                            </object>
 
+                                        </child>
+                                    </object>
+                                </child>
+                                <child>
+                                    <object class="GtkBox">
+                                        <property name="hexpand">TRUE</property>
+                                        <property name="valign">GTK_ALIGN_FILL</property>
+                                        <property name="name">Weekly</property>
+                                        <property name="orientation">GTK_ORIENTATION_VERTICAL</property>
+                                        <child>
+                                            <object class="GtkBox">
+                                                <property name="halign">GTK_ALIGN_FILL</property>
+                                                <property name="vexpand">TRUE</property>
+                                            </object>
+                                        </child>
+                                        <child>
+                                            <object class="GtkBox">
+                                                <property name="name">BottomButtonBoxContainer</property>
+                                                <child>
+                                                    <object id="WeeklyButtonBox" class="GtkBox">
+                                                        <property name="name">BottomButtonBox</property>
+                                                        <child>
+                                                            <object class="GtkButton">
+                                                                <property name="hexpand">TRUE</property>
+                                                                <property name="halign">GTK_ALIGN_FILL</property>
+                                                                <property name="height-request">50</property>
+                                                                <property name="label">+</property>
+                                                                <property name="name">Add</property>
+                                                            </object>
+                                                        </child>
+                                                    </object>
+                                                </child>
+                                            </object>
+                                        </child>
+                                    </object>
+                                </child>
+                            </object>
+                        </child>
                     </object>
                 </child>
                 <child type="overlay">
@@ -51,7 +130,6 @@
                         </child>
                     </object>
                 </child>
-
             </object>
         </child>
     </object>

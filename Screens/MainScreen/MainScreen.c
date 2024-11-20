@@ -2,8 +2,10 @@
 #define ms *1000000
 
 void DrawerButtonOnClick(GtkWidget *button, gpointer data);
+void AddButtonOnClick(GtkWidget *button, gpointer data);
 
 void showDrawerContext(gpointer drawer);
+void drawerCalendarSelect(GtkWidget *calendar,gpointer data);
 
 //主畫面
 void MainScreen(GtkBuilder *builder) {
@@ -14,11 +16,15 @@ void MainScreen(GtkBuilder *builder) {
     gtk_box_append(drawerIconBox, drawerIconImage);
 
     // 取得按鈕
-    GtkWidget *button = (GtkWidget *) gtk_builder_get_object(builder, "DrawerButton");
+    GtkWidget *drawerButton = (GtkWidget *) gtk_builder_get_object(builder, "DrawerButton");
     GtkWidget *drawerBox = (GtkWidget *) gtk_builder_get_object(builder, "DrawerBox");
+    GtkWidget *addButton = (GtkWidget *) gtk_builder_get_object(builder,"AddButton");
+    GtkWidget *addButtonBox = (GtkWidget *) gtk_builder_get_object(builder,"DailyButtonBox");
+
+    g_signal_connect(addButton,"clicked",G_CALLBACK(AddButtonOnClick),(GtkBuilder *)addButtonBox);
 
     // 按鈕連接點及觸發器
-    g_signal_connect(button, "clicked", G_CALLBACK(DrawerButtonOnClick), drawerBox);
+    g_signal_connect(drawerButton, "clicked", G_CALLBACK(DrawerButtonOnClick), drawerBox);
 }
 
 bool isDrawerOpen = false; // 判斷Drawer是否打開
@@ -100,14 +106,38 @@ gboolean drawerAnimation(gpointer data) {
     return G_SOURCE_CONTINUE; // 繼續動畫
 }
 
-
 void showDrawerContext(gpointer drawer) {
-    GtkWidget *title = gtk_label_new("選擇日期");
+    GtkWidget *title = gtk_label_new("Select Date");
     gtk_widget_set_halign(title,GTK_ALIGN_START);
     gtk_widget_set_name(title,"SelectDateTitle");
     gtk_box_append(drawer,title);
 
     GtkWidget *calendar = gtk_calendar_new();
     gtk_widget_set_name(calendar,"SelectCalendar");
+    g_signal_connect(calendar,"day-selected",G_CALLBACK(drawerCalendarSelect),NULL);
     gtk_box_append(drawer,calendar);
+}
+
+gboolean bottomButtonAnimation(gpointer button);
+
+void AddButtonOnClick(GtkWidget *button, gpointer data) {
+    g_idle_add((GSourceFunc)bottomButtonAnimation,data);
+}
+
+
+void drawerCalendarSelect(GtkWidget *calendar,gpointer data) {
+    printf("%d\n",gtk_calendar_get_day(calendar));
+}
+
+gboolean bottomButtonAnimation(gpointer button) {
+    int height = gtk_widget_get_height((GtkWidget *)button);
+    int dh = 5;
+    if(height>=150) {
+        gtk_widget_set_size_request(button,-1,150);
+        return G_SOURCE_REMOVE; // 停止動畫
+    }
+    height += dh;
+    printf("%d\n",height);
+    gtk_widget_set_size_request(button,-1,height);
+    return G_SOURCE_CONTINUE; // 繼續動畫
 }
