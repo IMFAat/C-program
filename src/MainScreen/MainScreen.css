@@ -1,12 +1,27 @@
+/*:root {*/
+/*    --text-color: #0d1618;*/
+/*    --background-color: #fcf6f4;*/
+/*    --primary-color: #c97046;*/
+/*    --secondary-color: #dfcd93;*/
+/*    --accent-color: #d4c36c;*/
+/*    --schedule-color:#9f9f9f;*/
+/*    --button-color:#b8b8b8;*/
+/*}*/
+
 :root {
-    --text-color: #0d1618;
-    --background-color: #fcf6f4;
-    --primary-color: #c97046;
-    --secondary-color: #dfcd93;
-    --accent-color: #d4c36c;
-    --schedule-color:#9f9f9f;
-    --button-color:#b8b8b8;
+    --text-color: #E4E4E4; /* 主文字、標題文字 */
+    --background-color: #2D2D2D; /* 主背景色 */
+    --primary-color: #FF7043; /* 按鈕、重要點綴元素 */
+    --secondary-color: #616161; /* 輔助區域背景 */
+    --accent-color: #FFB74D; /* 強調按鈕或特殊狀態 */
+    --schedule-color: #424242; /* 次要區域背景色 */
+    --button-color: #607D8B; /* 通用按鈕背景 */
+    --bottom-button-box-color: #333333; /* BottomButtonBox 的背景色 */
 }
+
+
+
+
 
 #MainBox {
     background-color: var(--background-color);
@@ -18,6 +33,7 @@
 }
 
 #DrawerBox {
+    /*background-color: var(--secondary-color);*/
     background-color: var(--secondary-color);
     /*margin: 5px;*/
     border-radius: 10px;
@@ -64,24 +80,57 @@ button:hover {
     color: var(--text-color);
 }
 
-#SelectCalendar{
-    background-color: #eee2c4;
-    border-radius: 10px;
-    padding: 10px;
-    border: transparent;
+/*#SelectCalendar{*/
+/*    background-color: #eee2c4;*/
+/*    border-radius: 10px;*/
+/*    padding: 10px;*/
+/*    border: transparent;*/
+/*}*/
+
+/*#SelectCalendar label:selected{*/
+/*    background-color: #c97046;*/
+/*}*/
+
+/*#SelectCalendar button{*/
+/*    background-image: none;*/
+/*    border: transparent;*/
+/*    box-shadow: 0 0 transparent;*/
+/*    border-radius: 30px;*/
+/*    margin: 3px;*/
+/*}*/
+
+#SelectCalendar {
+    background-color: #3C3C3C; /* 深灰色背景，避免過於黑暗 */
+    border-radius: 12px; /* 增加圓角效果，使邊緣更圓潤 */
+    padding: 10px; /* 增加內邊距，讓內容不會過於擁擠 */
+    border: 1px solid #616161; /* 淺灰色邊框，增加層次感 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 輕微的陰影效果，讓元素脫穎而出 */
+    color: white; /* 文字顏色設為白色，對比度更高 */
 }
 
-#SelectCalendar label:selected{
-    background-color: #c97046;
+#SelectCalendar label:selected {
+    background-color: #FF7043; /* 按下的選擇區域使用明亮的橙色 */
+    color: white; /* 文字顏色設為白色，對比度更高 */
+    border-radius: 8px; /* 增加圓角，使選中狀態顯得更柔和 */
+    padding: 5px 10px; /* 增加內邊距，讓選擇區域看起來更舒適 */
 }
 
-#SelectCalendar button{
+#SelectCalendar button {
     background-image: none;
-    border: transparent;
-    box-shadow: 0 0 transparent;
+    border: 1px solid #607D8B; /* 輕微的邊框，讓按鈕顯得更精緻 */
     border-radius: 30px;
-    margin: 3px;
+    margin: 5px;
+    /*padding: 8px 16px; !* 調整按鈕大小，讓它們更具互動感 *!*/
+    background-color: #607D8B; /* 按鈕背景顏色 */
+    color: white; /* 按鈕文字顏色設為白色 */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* 添加過渡效果 */
 }
+
+#SelectCalendar button:hover {
+    background-color: #FF7043; /* 懸停時的按鈕背景顏色 */
+    transform: scale(1.05); /* 當按鈕懸停時略微放大 */
+}
+
 #Daily{
     background-color: var(--schedule-color);
     border-radius: 10px;
@@ -101,13 +150,18 @@ button:hover {
     border-color: transparent;
 }
 #BottomButtonBox{
-    background-color: red;
+    /*background-color: red;*/
     border-radius: 50px;
-    /*background-color: var(--schedule-color);*/
+    background-color: var(--bottom-button-box-color);
 }
 #BottomButtonBoxContainer{
     padding: 5px 20px 5px;
 }
 #Add:hover{
     background-color: gray;
+}
+
+#LABEL{
+    color: red;
+    font-size: 200px;
 }
