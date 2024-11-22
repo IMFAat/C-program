@@ -25,23 +25,23 @@ void main(void)
    char *errMsg = NULL;
    char **result;
 
-   /* ¶}±Ò database ÀÉ */
+   /* é–‹å•Ÿ database æª” */
    if (sqlite3_open_v2("daily.db3", &db, SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, NULL)) {
        return;
    }
 
-   /* «Ø¥ß Table */
+   /* å»ºç«‹ Table */
    sqlite3_exec(db, createsql, 0, 0, &errMsg);
 
-   /* ·s¼W¤@µ§¸ê®Æ */
+   /* æ–°å¢ä¸€ç­†è³‡æ–™ */
    sqlite3_exec(db, insertsql, 0, 0, &errMsg);
-   /* ¨ú±o¸Óµ§¸ê®Æªº ID */
+   /* å–å¾—è©²ç­†è³‡æ–™çš„ ID */
    printf("%d\n", sqlite3_last_insert_rowid(db));
 
-   /* ¨ú±o database ¸Ì©Ò¦³ªº¸ê®Æ */
+   /* å–å¾— database è£¡æ‰€æœ‰çš„è³‡æ–™ */
    sqlite3_get_table(db , querysql, &result , &rows, &cols, &errMsg);
 
-   /* ¦C¥X©Ò¦³¸ê®Æ */
+   /* åˆ—å‡ºæ‰€æœ‰è³‡æ–™ */
    for (i=0;i<rows;i++) {
        for (j=0;j<cols;j++) {
            printf("%s\t", result[i*cols+j]);
@@ -49,9 +49,9 @@ void main(void)
        printf("\n");
    }
 
-   /* ÄÀ©ñ */
+   /* é‡‹æ”¾ */
    sqlite3_free_table(result);
 
-   /* Ãö³¬ database */
+   /* é—œé–‰ database */
    sqlite3_close(db);
 }
