@@ -10,20 +10,24 @@ static char *createsql = "CREATE TABLE Calendar("
                 "Begin_Minute INTEGER,"
                 "End_Hour INTEGER,"
                 "End_Minute INTEGER,"
-                "Activity TEXT);";
+                "Activity TEXT,"
+                "Frequency INTEGER,"
+                "Now_Frequency INTEGER);";
 
 //新增資料
 static char *insertsql = "INSERT INTO Calendar VALUES(year, month, day, "
-                        "begin_hour, begin_minute, end_hour, end_minute, &activity);";
-//static char *insertsql = "INSERT INTO Calendar VALUES(0,0,0,0,0,0,0,'AAA');";
+                        "begin_hour, begin_minute, end_hour, end_minute, &activity, frequency, now_frequency);";
+//static char *insertsql = "INSERT INTO Calendar VALUES(0,0,0,0,0,0,0,'AAA',0,0);";
 
 //刪除資料
 static char *deletesql = "DELETE FROM Calendar WHERE Year = year AND Month = month AND Day = day AND "
                         "Begin_Hour = begin_hour AND Begin_Minute = begin_minute AND "
-                        "End_Hour = end_hour AND End_Minute = end_minute AND Activity = &activity;";
+                        "End_Hour = end_hour AND End_Minute = end_minute AND Activity = &activity AND"
+                        "Frequency = frequency AND Now_Frequency = now_frequency";
 // static char *deletesql = "DELETE FROM Calendar WHERE Year = 0 AND Month = 0 AND Day = 0 AND "
 //                         "Begin_Hour = 0 AND Begin_Minute = 0 AND "
-//                         "End_Hour = 0 AND End_Minute = 0 AND Activity = 'AAA';";
+//                         "End_Hour = 0 AND End_Minute = 0 AND Activity = 'AAA' AND"
+//                         "Frequency = 0 AND Now_Frequency = 0;";
 
 //查詢資料
 static char *searchsql = "SELECT * FROM Calendar WHERE Year = year AND Month = month AND Day = day;";
