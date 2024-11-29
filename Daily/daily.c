@@ -16,14 +16,14 @@ static char *createsql = "CREATE TABLE Calendar("
                 "Now_Frequency INTEGER);";
 
 //新增資料
-static char *insertsql = "INSERT INTO Calendar VALUES(year, month, day, day_of_week"
+static char *insertsql = "INSERT INTO Calendar VALUES(year, month, day, day_of_week, "
                         "begin_hour, begin_minute, end_hour, end_minute, &activity, frequency, now_frequency);";
 //static char *insertsql = "INSERT INTO Calendar VALUES(0,0,0,0,0,0,0,0,'AAA',0,0);";
 
 //刪除資料
 static char *deletesql = "DELETE FROM Calendar WHERE Year = year AND Month = month AND Day = day AND "
                         "Day_of_week = day_of_week AND Begin_Hour = begin_hour AND Begin_Minute = begin_minute AND "
-                        "End_Hour = end_hour AND End_Minute = end_minute AND Activity = &activity AND"
+                        "End_Hour = end_hour AND End_Minute = end_minute AND Activity = &activity AND "
                         "Frequency = frequency AND Now_Frequency = now_frequency";
 // static char *deletesql = "DELETE FROM Calendar WHERE Year = 0 AND Month = 0 AND Day = 0 AND "
 //                         "Day_of_week = 0 AND Begin_Hour = 0 AND Begin_Minute = 0 AND "
