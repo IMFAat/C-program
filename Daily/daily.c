@@ -27,7 +27,7 @@ static char *deletesql = "DELETE FROM Calendar WHERE Year = year AND Month = mon
                         "Frequency = frequency AND Now_Frequency = now_frequency";
 // static char *deletesql = "DELETE FROM Calendar WHERE Year = 0 AND Month = 0 AND Day = 0 AND "
 //                         "Day_of_week = 0 AND Begin_Hour = 0 AND Begin_Minute = 0 AND "
-//                         "End_Hour = 0 AND End_Minute = 0 AND Activity = 'AAA' AND"
+//                         "End_Hour = 0 AND End_Minute = 0 AND Activity = 'AAA' AND "
 //                         "Frequency = 0 AND Now_Frequency = 0;";
 
 //查詢資料
