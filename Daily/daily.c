@@ -78,10 +78,10 @@ void main(void)
         /*查詢一筆資料*/
         sqlite3_exec(db, searchsql, callback, 0, &errMsg);
         
-        /* 取得 database 裡所有的資料 */
+        /* 取得 database 裡的資料 */
         sqlite3_get_table(db , searchsql, &result , &rows, &cols, &errMsg);
 
-        /* 列出所有資料 */
+        /* 列出資料 */
         for (i=0;i<rows;i++) {
             for (j=0;j<cols;j++) {
                 printf("%s\t", result[i*cols+j]);
