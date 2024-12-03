@@ -17,7 +17,7 @@ static char *createsql = "CREATE TABLE Calendar("
                 "Week_of_year INTEGER);";
 
 //新增資料
-static char *insertsql = "INSERT INTO Calendar VALUES(year, month, day, day_of_week"
+static char *insertsql = "INSERT INTO Calendar VALUES(year, month, day, day_of_week, "
                         "begin_hour, begin_minute, end_hour, end_minute, &activity, frequency, now_frequency, week_of_year);";
 //  static char *insertsql = "INSERT INTO Calendar VALUES(2025,12,20,4,9,30,11,30,'Calculus',30,10, 0);";
 
