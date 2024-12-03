@@ -55,7 +55,7 @@ void main(void)
    char **result;
 
    /* 開啟 database 檔 */
-   if (sqlite3_open_v2("example.db3", &db, SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, NULL)) {
+   if (sqlite3_open_v2("daily.db3", &db, SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, NULL)) {
        return;
    }
 
@@ -98,15 +98,15 @@ void main(void)
    /* 取得該筆資料的 ID */
 //   printf("%d\n", sqlite3_last_insert_rowid(db));
 
-        sqlite3_get_table(db , querysql, &result , &rows, &cols, &errMsg);
+//        sqlite3_get_table(db , querysql, &result , &rows, &cols, &errMsg);
 
         /* 列出所有資料 */
-        for (i=0;i<rows;i++) {
+/*        for (i=0;i<rows;i++) {
             for (j=0;j<cols;j++) {
                 printf("%s\t", result[i*cols+j]);
             }
             printf("\n");
-        }
+        }*/
 
    /* 釋放 */
    sqlite3_free_table(result);
