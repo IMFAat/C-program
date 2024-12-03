@@ -49,7 +49,7 @@ static int callback(void *NotUsed, int argc, char **argv, char **azColName) {
 
 void main(void)
 {
-   int i, j, rows, cols, action=1;
+   int i, j, rows, cols, action;
    sqlite3 *db;
    char *errMsg = NULL;
    char **result;
