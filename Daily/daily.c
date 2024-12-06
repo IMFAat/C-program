@@ -23,10 +23,7 @@ static char *insertsql = "INSERT INTO Calendar VALUES(year, month, day, day_of_w
 
 //刪除資料
 static char *deletesql = "DELETE FROM Calendar WHERE Year = year AND Month = month AND Day = day AND Activity = &activity;";
-// static char *deletesql = "DELETE FROM Calendar WHERE Year = 2025 AND Month = 12 AND Day = 20 AND "
-//                         "Day_of_week = 4 AND Begin_Hour = 9 AND Begin_Minute = 30 AND "
-//                         "End_Hour = 11 AND End_Minute = 30 AND Activity = 'Calculus' AND "
-//                         "Frequency = 30 AND Now_Frequency = 10 AND Week_of_year = 0;";
+// static char *deletesql = "DELETE FROM Calendar WHERE Year = 2025 AND Month = 12 AND Day = 20 AND Activity = 'Calculus';";
 
 //查詢資料
 static char *searchsql = "SELECT * FROM Calendar WHERE Year = year AND Month = month AND Day = day;";
