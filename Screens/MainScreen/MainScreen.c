@@ -418,7 +418,7 @@ gboolean drawerAnimation(gpointer data)
         step = 0;
     }
 
-    double drawerOpacity = (width - 65) * 1. / (330 - 65);
+    double drawerOpacity = (width - 65) * 1. / (300 - 65);
     gtk_widget_set_size_request(drawer, width, -1);
     gtk_widget_set_opacity(drawerContextScrolledWindow, drawerOpacity);
 
@@ -1260,35 +1260,38 @@ gboolean v_clock(gpointer data)
     for (int i = 0; i < g_data->len; i++)
     {
         Daily_Mission_Data_widget *regis = &g_array_index(g_data, Daily_Mission_Data_widget, i);
-        if (regis->end_hour * 60 + regis->end_minute < Now->tm_hour * 60 + Now->tm_min)
+        if (select_day == Now->tm_mday || select_month == Now->tm_mon || select_year == Now->tm_year)
         {
-            if (regis->now_frequency >= regis->frequency)
+            if (regis->end_hour * 60 + regis->end_minute < Now->tm_hour * 60 + Now->tm_min)
             {
-                gtk_button_set_label((GtkButton *)regis->Add_frequency, "Done");
+                if (regis->now_frequency >= regis->frequency)
+                {
+                    gtk_button_set_label((GtkButton *)regis->Add_frequency, "Done");
+                    gtk_widget_set_sensitive(regis->Add_frequency, false);
+                }
+                else
+                {
+                    gtk_button_set_label((GtkButton *)regis->Add_frequency, "time is over");
+                    gtk_widget_set_sensitive(regis->Add_frequency, false);
+                }
+            }
+            else if (regis->begin_hour * 60 + regis->begin_minute >= Now->tm_hour * 60 + Now->tm_min)
+            {
+                gtk_button_set_label((GtkButton *)regis->Add_frequency, "Not started yet");
                 gtk_widget_set_sensitive(regis->Add_frequency, false);
             }
             else
             {
-                gtk_button_set_label((GtkButton *)regis->Add_frequency, "time is over");
-                gtk_widget_set_sensitive(regis->Add_frequency, false);
-            }
-        }
-        else if (regis->begin_hour * 60 + regis->begin_minute >= Now->tm_hour * 60 + Now->tm_min)
-        {
-            gtk_button_set_label((GtkButton *)regis->Add_frequency, "Not started yet");
-            gtk_widget_set_sensitive(regis->Add_frequency, false);
-        }
-        else
-        {
-            if (regis->now_frequency >= regis->frequency)
-            {
-                gtk_button_set_label((GtkButton *)regis->Add_frequency, "Done");
-                gtk_widget_set_sensitive(regis->Add_frequency, false);
-            }
-            else
-            {
-                gtk_button_set_label((GtkButton *)regis->Add_frequency, "Process +1");
-                gtk_widget_set_sensitive(regis->Add_frequency, true);
+                if (regis->now_frequency >= regis->frequency)
+                {
+                    gtk_button_set_label((GtkButton *)regis->Add_frequency, "Done");
+                    gtk_widget_set_sensitive(regis->Add_frequency, false);
+                }
+                else
+                {
+                    gtk_button_set_label((GtkButton *)regis->Add_frequency, "Process +1");
+                    gtk_widget_set_sensitive(regis->Add_frequency, true);
+                }
             }
         }
     }
@@ -1404,7 +1407,7 @@ int calculate_iso_week_number(int year, int month, int day)
     return atoi(buffer);
 }
 
-//Change the ADD button's label to REVISE, display the box for REVISE, and disable the SHOW button
+// Change the ADD button's label to REVISE, display the box for REVISE, and disable the SHOW button
 void v_D_revise(GtkButton *button, gpointer data)
 {
     Mission_Combination *combine = data;
@@ -1434,7 +1437,7 @@ void v_D_revise(GtkButton *button, gpointer data)
     gtk_widget_set_sensitive((GtkWidget *)combine->daily_animation_data->button, false);
 }
 
-//Modify the value in the array
+// Modify the value in the array
 void v_D_revise_btn(GtkButton *button, gpointer data)
 {
     Mission_Combination *combine = data;
@@ -1482,7 +1485,7 @@ void v_D_revise_btn(GtkButton *button, gpointer data)
     }
 }
 
-//Change the ADD button's label to REVISE, display the box for REVISE, and disable the SHOW button
+// Change the ADD button's label to REVISE, display the box for REVISE, and disable the SHOW button
 void v_W_revise(GtkButton *button, gpointer data)
 {
     Mission_Combination *combine = data;
@@ -1507,7 +1510,7 @@ void v_W_revise(GtkButton *button, gpointer data)
     gtk_widget_set_sensitive((GtkWidget *)combine->weekly_animation_data->button, false);
 }
 
-//Modify the value in the array
+// Modify the value in the array
 void v_W_revise_btn(GtkButton *button, gpointer data)
 {
     Mission_Combination *combine = data;
