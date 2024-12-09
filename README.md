@@ -21,6 +21,8 @@ add_custom_target(copy_ui_file ALL
 add_executable(FinalProject MACOSX_BUNDLE main.c
         Screens/MainScreen/MainScreen.c
         Screens/MainScreen/MainScreen.h
-        Screens/MainScreen/MainScreenFunctions.h
-        Screens/MainScreen/MainScreenFunctions.c)
+        sqlite/daily/daily.h
+        sqlite/daily/daily.c
+        sqlite/weekly/weekly.h
+        sqlite/weekly/weekly.c)
 ```
