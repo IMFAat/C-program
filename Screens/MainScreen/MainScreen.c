@@ -418,7 +418,7 @@ gboolean drawerAnimation(gpointer data)
         step = 0;
     }
 
-    double drawerOpacity = (width - 65) * 1. / (300 - 65);
+    double drawerOpacity = (width - 65) * 1. / (330 - 65);
     gtk_widget_set_size_request(drawer, width, -1);
     gtk_widget_set_opacity(drawerContextScrolledWindow, drawerOpacity);
 
