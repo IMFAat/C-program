@@ -1,0 +1,4 @@
+/Users/kai/Desktop/Final Project/C-program/cmake-build-debug/CMakeFiles/FinalProject.dir
+/Users/kai/Desktop/Final Project/C-program/cmake-build-debug/CMakeFiles/copy_ui_file.dir
+/Users/kai/Desktop/Final Project/C-program/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/kai/Desktop/Final Project/C-program/cmake-build-debug/CMakeFiles/rebuild_cache.dir

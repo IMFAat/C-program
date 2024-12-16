@@ -18,7 +18,7 @@ link_directories("/opt/homebrew/Cellar/json-c/0.18/include")
 add_definitions(${GTK4_CFLAGS_OTHER})
 add_definitions(-DROOT_PATH="${CMAKE_BINARY_DIR}")
 
-add_executable(FinalProject MACOSX_BUNDLE main.c
+add_executable(FinalProject main.c
         Screens/MainScreen/MainScreen.h
         Screens/MainScreen/MainScreen.c
         sqlite/daily/daily.h

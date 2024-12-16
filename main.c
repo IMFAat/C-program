@@ -10,6 +10,7 @@ static void activate(GtkApplication *app, gpointer user_data) {
 
     GtkStack *stack = (GtkStack *) gtk_stack_new();
     GtkBuilder *mainBuilder = gtk_builder_new_from_file(ROOT_PATH"/src/MainScreen/MainScreen.ui");
+//    GtkBuilder *mainBuilder = gtk_builder_new_from_file("src/MainScreen/MainScreen.ui");
 
     GtkWidget *main_screen = GTK_WIDGET(gtk_builder_get_object(mainBuilder, "MainScreen"));
     if (main_screen) {
@@ -21,6 +22,7 @@ static void activate(GtkApplication *app, gpointer user_data) {
     }
 
     const char cssPath[]=ROOT_PATH"/src/MainScreen/MainScreen.css";
+//    const char cssPath[]="/src/MainScreen/MainScreen.css";
     GtkCssProvider * cssProvider = gtk_css_provider_new();
     gtk_css_provider_load_from_path(cssProvider, cssPath);
     gtk_style_context_add_provider_for_display(gdk_display_get_default(),GTK_STYLE_PROVIDER(cssProvider),GTK_STYLE_PROVIDER_PRIORITY_USER);
