@@ -9,14 +9,14 @@
 /*}*/
 
 :root {
-    --text-color: #E4E4E4; /* 主文字、標題文字 */
-    --background-color: #2D2D2D; /* 主背景色 */
-    --primary-color: #FF7043; /* 按鈕、重要點綴元素 */
-    --secondary-color: #616161; /* 輔助區域背景 */
-    --accent-color: #FFB74D; /* 強調按鈕或特殊狀態 */
-    --schedule-color: #424242; /* 次要區域背景色 */
-    --button-color: #6d808f; /* 通用按鈕背景 */
-    --bottom-button-box-color: #333333; /* BottomButtonBox 的背景色 */
+    --text-color: #E4E4E4; /* Set the color of texts, such as titles, contents, etc. */
+    --background-color: #2D2D2D; /* Set the color of main background */
+    --primary-color: #FF7043; /* Set the color of bottons */
+    --secondary-color: #616161; /* Set the color which assists the background area*/
+    --accent-color: #FFB74D; /* Set the color of emphasizing bottons and special status */
+    --schedule-color: #424242; /* Set the color of secondary background area (Schedule) */
+    --button-color: #6d808f; /* Set the color of default bottons */
+    --bottom-button-box-color: #333333; /* Set the color of botton at the bottom of the app (ADD Botton) */
 }
 
 #MainBox {
@@ -96,18 +96,18 @@ button:hover {
 /*}*/
 
 #SelectCalendar {
-    background-color: #3C3C3C; /* 深灰色背景，避免過於黑暗 */
-    border-radius: 12px; /* 增加圓角效果，使邊緣更圓潤 */
-    padding: 10px; /* 增加內邊距，讓內容不會過於擁擠 */
-    border: 1px solid #616161; /* 淺灰色邊框，增加層次感 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 輕微的陰影效果，讓元素脫穎而出 */
-    color: white; /* 文字顏色設為白色，對比度更高 */
+    background-color: #3C3C3C; /* Set the background into dark gray, avoiding being too dark.*/
+    border-radius: 12px; /* Add a rounded corner effect to make the edges softer, which can beautify our user interface.*/
+    padding: 10px; /* Setting the padding to prevent the content from being too cramped. */
+    border: 1px solid #616161; /* Light gray border to add a sense of depth. */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* A subtle shadow effect to make the element stand out. */
+    color: white; /* Set the text color to white for higher contrast. */
 }
 
 #SelectCalendar label:selected {
-    background-color: #FF7043; /* 按下的選擇區域使用明亮的橙色 */
-    color: white; /* 文字顏色設為白色，對比度更高 */
-    border-radius: 8px; /* 增加圓角，使選中狀態顯得更柔和 */
+    background-color: #FF7043; /* When the button is pressed, use a bright orange to indicate the selected state. */
+    color: white; /* Set the text color to white for higher contrast. */
+    border-radius: 8px; /* Add a rounded corner effect to make the selected status softer */
     padding: 5px 10px; /* 增加內邊距，讓選擇區域看起來更舒適 */
 }
 
