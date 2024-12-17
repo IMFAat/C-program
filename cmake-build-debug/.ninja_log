@@ -1,48 +1,8 @@
 # ninja log v6
-3	50	1733768352646843394	CMakeFiles/copy_ui_file	4aa2c0fcc4063f45
-21	326	1733768050457017321	CMakeFiles/FinalProject.dir/main.c.o	cadd5b30f8c8a768
-27	88	1733768288300092027	FinalProject	d0d0c7ab2004457
-21	334	1733768050457615399	CMakeFiles/FinalProject.dir/sqlite/weekly/weekly.c.o	11e6016c5d520400
-3	50	1733768352646843394	/Users/kai/Desktop/Final Project/C-program/cmake-build-debug/CMakeFiles/copy_ui_file	4aa2c0fcc4063f45
-21	337	1733768050457453734	CMakeFiles/FinalProject.dir/sqlite/daily/daily.c.o	6331e1b2ad444250
-21	358	1733768050457277361	CMakeFiles/FinalProject.dir/Screens/MainScreen/MainScreen.c.o	bec0b36ace758b14
-53	101	1733768352695327850	FinalProject.app/Contents/MacOS/FinalProject	7dd9aa3475c4ebe1
-7	29	1733768379360271867	CMakeFiles/copy_ui_file	4aa2c0fcc4063f45
-7	29	1733768379360271867	/Users/kai/Desktop/Final Project/C-program/cmake-build-debug/CMakeFiles/copy_ui_file	4aa2c0fcc4063f45
-10	27	1733789709040405369	CMakeFiles/copy_ui_file	4aa2c0fcc4063f45
-10	27	1733789709040405369	/Users/kai/Desktop/Final Project/C-program/cmake-build-debug/CMakeFiles/copy_ui_file	4aa2c0fcc4063f45
-5	22	1733789716631744169	CMakeFiles/copy_ui_file	4aa2c0fcc4063f45
-5	22	1733789716631744169	/Users/kai/Desktop/Final Project/C-program/cmake-build-debug/CMakeFiles/copy_ui_file	4aa2c0fcc4063f45
-9	24	1733791687635220075	CMakeFiles/copy_ui_file	4aa2c0fcc4063f45
-9	24	1733791687635220075	/Users/kai/Desktop/Final Project/C-program/cmake-build-debug/CMakeFiles/copy_ui_file	4aa2c0fcc4063f45
-14	32	1733791798622621686	CMakeFiles/copy_ui_file	4aa2c0fcc4063f45
-14	32	1733791798622621686	/Users/kai/Desktop/Final Project/C-program/cmake-build-debug/CMakeFiles/copy_ui_file	4aa2c0fcc4063f45
-19	40	1733795778888883711	CMakeFiles/copy_ui_file	4aa2c0fcc4063f45
-19	40	1733795778888883711	/Users/kai/Desktop/Final Project/C-program/cmake-build-debug/CMakeFiles/copy_ui_file	4aa2c0fcc4063f45
-4	23	1733795807217968900	CMakeFiles/copy_ui_file	4aa2c0fcc4063f45
-4	23	1733795807217968900	/Users/kai/Desktop/Final Project/C-program/cmake-build-debug/CMakeFiles/copy_ui_file	4aa2c0fcc4063f45
-13	27	1733797007479055505	CMakeFiles/copy_ui_file	4aa2c0fcc4063f45
-13	27	1733797007479055505	/Users/kai/Desktop/Final Project/C-program/cmake-build-debug/CMakeFiles/copy_ui_file	4aa2c0fcc4063f45
-19	33	1733802354068241112	CMakeFiles/copy_ui_file	4aa2c0fcc4063f45
-19	33	1733802354068241112	/Users/kai/Desktop/Final Project/C-program/cmake-build-debug/CMakeFiles/copy_ui_file	4aa2c0fcc4063f45
-4	19	1733807761672513452	CMakeFiles/copy_ui_file	4aa2c0fcc4063f45
-4	19	1733807761672513452	/Users/kai/Desktop/Final Project/C-program/cmake-build-debug/CMakeFiles/copy_ui_file	4aa2c0fcc4063f45
-19	406	1733807761687685510	CMakeFiles/FinalProject.dir/main.c.o	cadd5b30f8c8a768
-407	530	1733807762074875055	FinalProject	d0d0c7ab2004457
-7	21	1733807776580472780	CMakeFiles/copy_ui_file	4aa2c0fcc4063f45
-7	21	1733807776580472780	/Users/kai/Desktop/Final Project/C-program/cmake-build-debug/CMakeFiles/copy_ui_file	4aa2c0fcc4063f45
-21	244	1733807776594180500	CMakeFiles/FinalProject.dir/main.c.o	cadd5b30f8c8a768
-244	278	1733807776817295866	FinalProject	d0d0c7ab2004457
-5	21	1733807856686741902	CMakeFiles/copy_ui_file	4aa2c0fcc4063f45
-5	21	1733807856686741902	/Users/kai/Desktop/Final Project/C-program/cmake-build-debug/CMakeFiles/copy_ui_file	4aa2c0fcc4063f45
-21	252	1733807856702330171	CMakeFiles/FinalProject.dir/main.c.o	cadd5b30f8c8a768
-252	292	1733807856933877528	FinalProject	d0d0c7ab2004457
-21	39	1734206470195735763	CMakeFiles/copy_ui_file	4aa2c0fcc4063f45
-21	39	1734206470195735763	/Users/kai/Desktop/Final Project/C-program/cmake-build-debug/CMakeFiles/copy_ui_file	4aa2c0fcc4063f45
+14	29	1734397005797160729	CMakeFiles/copy_ui_file	4aa2c0fcc4063f45
 39	548	1734206470214111430	CMakeFiles/FinalProject.dir/main.c.o	cadd5b30f8c8a768
-39	563	1734206470214400054	CMakeFiles/FinalProject.dir/Screens/MainScreen/MainScreen.c.o	bec0b36ace758b14
 564	691	1734206470740570358	FinalProject	d0d0c7ab2004457
-19	36	1734276930864169467	CMakeFiles/copy_ui_file	4aa2c0fcc4063f45
-19	36	1734276930864169467	/Users/kai/Desktop/Final Project/C-program/cmake-build-debug/CMakeFiles/copy_ui_file	4aa2c0fcc4063f45
-4	20	1734276939959934517	CMakeFiles/copy_ui_file	4aa2c0fcc4063f45
-4	20	1734276939959934517	/Users/kai/Desktop/Final Project/C-program/cmake-build-debug/CMakeFiles/copy_ui_file	4aa2c0fcc4063f45
+21	334	1733768050457615399	CMakeFiles/FinalProject.dir/sqlite/weekly/weekly.c.o	11e6016c5d520400
+14	29	1734397005797160729	/Users/kai/Desktop/Final Project/C-program/cmake-build-debug/CMakeFiles/copy_ui_file	4aa2c0fcc4063f45
+21	337	1733768050457453734	CMakeFiles/FinalProject.dir/sqlite/daily/daily.c.o	6331e1b2ad444250
+39	563	1734206470214400054	CMakeFiles/FinalProject.dir/Screens/MainScreen/MainScreen.c.o	bec0b36ace758b14

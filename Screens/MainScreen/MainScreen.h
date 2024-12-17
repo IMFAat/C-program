@@ -1,7 +1,3 @@
-//
-// Created by Kai on 2024/11/7.
-//
-
 #ifndef MAINSCREEN_H
 #define MAINSCREEN_H
 

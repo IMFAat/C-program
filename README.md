@@ -6,7 +6,23 @@
 [Slides](https://github.com/IMFAat/C-program/blob/main/Presentation/Slides.pdf)
 
 ---
-CMakeList.txt
+## Snapshots (On macOS)
+### Main Screen
+![MainUI](Images/MainUI.png)
+### Added Activity
+![img.png](Images/Added.png)
+### Drawer Expended
+![img.png](Drawer.png)
+### Bottom Add Activity Menu
+![img.png](Images/Bottom_Menu.png)
+---
+## How to run the project
+### Step 1
+Clone the project
+### Step 2
+
+---
+## CMakeList.txt
 ```aiignore
 add_definitions(-DROOT_PATH="${CMAKE_BINARY_DIR}")
 ```
