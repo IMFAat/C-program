@@ -20,9 +20,20 @@
 ### Step 1
 Clone the project
 ### Step 2
+Install CMake and GTK\
+[CNake Download](https://cmake.org/download/)\
+[GTK Install](https://www.gtk.org/docs/installations/)
+### Step 3
+Open the terminal and navigate to the project directory
+### Step 4
+Create CMakeLists.txt file in the project directory\
+(Content depends on the environment)
+### Step 5
+Run the code
 
 ---
 ## CMakeList.txt
+CMakeList.txt needs to contain the following code
 ```aiignore
 add_definitions(-DROOT_PATH="${CMAKE_BINARY_DIR}")
 ```
