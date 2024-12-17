@@ -108,24 +108,24 @@ button:hover {
     background-color: #FF7043; /* When the button is pressed, use a bright orange to indicate the selected state. */
     color: white; /* Set the text color to white for higher contrast. */
     border-radius: 8px; /* Add a rounded corner effect to make the selected status softer */
-    padding: 5px 10px; /* 增加內邊距，讓選擇區域看起來更舒適 */
+    padding: 5px 10px; /* Increase the padding to make the selection area looks more beautiful. */
 }
 
 #SelectCalendar button {
     background-image: none;
-    border: 1px solid #607D8B; /* 輕微的邊框，讓按鈕顯得更精緻 */
+    border: 1px solid #607D8B; /* A subtle border to make the button appear more exquisite. */
     border-radius: 30px;
     margin: 5px;
-    /*padding: 8px 16px; !* 調整按鈕大小，讓它們更具互動感 *!*/
-    background-color: #607D8B; /* 按鈕背景顏色 */
-    color: white; /* 按鈕文字顏色設為白色 */
-    /* cursor: pointer;  當鼠標懸停時變為可點擊手勢  */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* 添加過渡效果 */
+    /*padding: 8px 16px; !* Adjust the button size to make them more interactive. *!*/
+    background-color: #607D8B; /* Button background color. */
+    color: white; /* Set the button text color to white. */
+    /* cursor: pointer;  Change mouse to a click cursor when the mouse hovers over.  */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add a transition effect. */
 }
 
 #SelectCalendar button:hover {
-    background-color: #FF7043; /* 懸停時的按鈕背景顏色 */
-    transform: scale(1.05); /* 當按鈕懸停時略微放大 */
+    background-color: #FF7043; /* Change the button background color when the mouse hovers over. */
+    transform: scale(1.05); /* "Enlarge slightly when the button is hovered over." */
 }
 
 #Daily{
@@ -172,8 +172,8 @@ button:hover {
     color: white;
 }
 #ALL_Textview{
-    border: 2px solid black; /* 邊框顏色與寬度 */
-    border-radius: 10px;       /* 圓角半徑 */
+    border: 2px solid black; /* Border color and width */
+    border-radius: 10px;       /* Border radius */
     margin: 10px 5px 10px 5px; 
     background-color: var(--secondary-color);
     color:white;
@@ -181,7 +181,7 @@ button:hover {
 #check {
     background-image: none;
     background-color: var(--button-color);
-    color: #fff; /* 白色文字 */
+    color: #fff; /* White texts */
     border: none;
     /* text-align: center; */
     text-decoration: none;
@@ -194,8 +194,8 @@ button:hover {
     background-color: gray;
 }
 #spinbutton{
-    border: 2px solid black; /* 邊框顏色與寬度 */
-    border-radius: 10px;       /* 圓角半徑 */
+    border: 2px solid black; /* Border color and width */
+    border-radius: 10px;       /* Border radius */
     
     margin: 10px 5px 10px 5px;
     background-color: var(--secondary-color);
