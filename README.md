@@ -1,6 +1,6 @@
 # Daily Planner
 ---
-## The Latest Presention Files (Please download here)
+## The Latest Presentation Files (Please download here)
 [Document](https://github.com/IMFAat/C-program/blob/main/Presentation/Document.pdf)
 
 [Slides](https://github.com/IMFAat/C-program/blob/main/Presentation/Slides.pdf)
